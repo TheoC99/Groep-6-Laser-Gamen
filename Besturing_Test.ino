@@ -19,10 +19,26 @@ int edgeThr = 700; // kalibreren op locatie
 enum State { PATROL, AVOID };
 State state = PATROL;
 
-void motorsStop(){ digitalWrite(LEFT_FWD,LOW); digitalWrite(LEFT_BWD,LOW); digitalWrite(RIGHT_FWD,LOW); digitalWrite(RIGHT_BWD,LOW); }
-void motorsForward(){ digitalWrite(LEFT_FWD,HIGH); digitalWrite(LEFT_BWD,LOW); digitalWrite(RIGHT_FWD,HIGH); digitalWrite(RIGHT_BWD,LOW); }
-void motorsBackward(){ digitalWrite(LEFT_FWD,LOW); digitalWrite(LEFT_BWD,HIGH); digitalWrite(RIGHT_FWD,LOW); digitalWrite(RIGHT_BWD,HIGH); }
-void motorsRight(){ digitalWrite(LEFT_FWD,HIGH); digitalWrite(LEFT_BWD,LOW); digitalWrite(RIGHT_FWD,LOW); digitalWrite(RIGHT_BWD,HIGH); }
+void motorsStop(){ 
+   digitalWrite(LEFT_FWD,LOW); 
+   digitalWrite(LEFT_BWD,LOW); 
+   digitalWrite(RIGHT_FWD,LOW); 
+   digitalWrite(RIGHT_BWD,LOW); }
+void motorsForward(){ 
+   digitalWrite(LEFT_FWD,HIGH); 
+   digitalWrite(LEFT_BWD,LOW); 
+   digitalWrite(RIGHT_FWD,HIGH);
+   digitalWrite(RIGHT_BWD,LOW); }
+void motorsBackward(){ 
+   digitalWrite(LEFT_FWD,LOW); 
+   digitalWrite(LEFT_BWD,HIGH); 
+   digitalWrite(RIGHT_FWD,LOW); 
+   digitalWrite(RIGHT_BWD,HIGH); }
+void motorsRight(){ 
+   digitalWrite(LEFT_FWD,HIGH); 
+   digitalWrite(LEFT_BWD,LOW); 
+   digitalWrite(RIGHT_FWD,LOW); 
+   digitalWrite(RIGHT_BWD,HIGH); }
 
 bool edgeHit() {
   // indien wit tape hoge waarde geeft: gebruik '>' vergelijking
