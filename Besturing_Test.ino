@@ -1,8 +1,7 @@
 /* Control Test (State Machine)
-   Doel: simpele besturing met toestanden en randbeveiliging.
-   - PATROL rijdt vooruit, checkt rand; bij rand -> AVOID.
-   - AVOID maakt korte terug/bochtbeweging en gaat terug naar PATROL.
-   - Deze test valideert logische flow en reactietijden zonder schieten.
+   Doel: simpele besturing via Bluetooth met ESP32
+   - verbinding maken met telefoon / controller
+   - Toon via Serial monitor de geregistreerde bewegingen
 */
 
 #define LEFT_FWD   4
